@@ -1,0 +1,21 @@
+body{
+
+	background: linear-gradient(#CE33E1, white); 
+	color:rgb(255, 255, 255);
+
+}
+   #nav
+   {
+	   width:100%;
+	   text-align: center;
+	   color: black;
+   }
+
+.img {
+	height : 600px ;
+	width : 1200px ;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+

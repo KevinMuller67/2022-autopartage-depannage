@@ -1,0 +1,54 @@
+void setup() {
+
+  // start the serial library:   Serial.begin(9600);   pinMode(A0,INPUT);
+
+ // give the ethernet module time to boot up:   delay(1000);
+
+  // start the Ethernet connection using a fixed IP address and DNS server:
+
+  Ethernet.begin(mac, ip);
+
+  // print the Ethernet board/shield's IP address:
+
+  Serial.print("My IP address: ");
+
+  Serial.println(Ethernet.localIP());
+
+}
+
+void loop()
+
+{
+
+httpRequest();   delay(20000);
+
+}
+
+// this method makes a HTTP connection to the server: void httpRequest() {   float loc=analogRead(A0);   if (client.connect(server, 80))
+
+
+  {
+
+    Serial.println("Connecting ");
+
+Serial.print("La voiture se situe : ");     Serial.println(loc);
+
+    // send the HTTP PUT request:
+
+client.print("GET ?loc=+"); /*localhost à changer par l'@ IP du serveur */     client.print(loc);
+
+    client.println(" HTTP/1.0") ;  
+
+    client.println();
+
+Serial.println("fin de la requete ");     ();
+
+  }
+
+  else {
+
+    // if you couldn't make a connection:     Serial.println("connection failed");     ();
+
+  }
+
+}

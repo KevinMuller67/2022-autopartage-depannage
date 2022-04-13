@@ -1,9 +1,9 @@
 #include <DHT.h>
-#include <Ethernet.h>
 #include <SPI.h>
+#include <WiFi.h>        // Include the Wi-Fi library
 
-byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x01 }; // RESERVED MAC ADDRESS
-EthernetClient client;
+const char* ssid     = "Livebox-1002";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "91F9D5D7C677DEFFDF15774EE4";     // The password of the Wi-Fi network
 
 #define DHTPIN 2 // SENSOR PIN
 #define DHTTYPE DHT11 // SENSOR TYPE - THE ADAFRUIT LIBRARY OFFERS SUPPORT FOR MORE MODELS
@@ -18,14 +18,25 @@ int h = 0;	// HUMIDITY VAR
 String data;
 
 void setup() { 
-	Serial.begin(115200);
+  Serial.begin(115200);         // Start the Serial communication to send messages to the computer
+  delay(10);
+  Serial.println('\n');
+  
+  WiFi.begin(ssid, password);             // Connect to the network
+  Serial.print("Connecting to ");
+  Serial.print(ssid);
 
-	if (Ethernet.begin(mac) == 0) {
-		Serial.println("Failed to configure Ethernet using DHCP"); 
-	}
+  while (WiFi.status() != WL_CONNECTED) { // Wait for the Wi-Fi to connect
+    delay(500);
+    Serial.print('.');
+  }
+  Serial.println('\n');
+  Serial.println("Connection established!");  
+  Serial.print("IP address:\t");
+  Serial.println(WiFi.localIP());         // Send the IP address of the ESP8266 to the computer
 
 	dht.begin(); 
-	delay(10000); // GIVE THE SENSOR SOME TIME TO START
+	delay(1000); // GIVE THE SENSOR SOME TIME TO START
 
 	h = (int) dht.readHumidity(); 
 	t = (int) dht.readTemperature(); 
@@ -42,7 +53,7 @@ void loop(){
 		t = (int) dht.readTemperature();
 	}
 
-	data = "temp1=23" + t + "hum1=80" + h;
+	data = "temp1=" + t + "&hum1=" + h;
 
 	if (client.connect("92.131.18.210",80)) { // REPLACE WITH YOUR SERVER ADDRESS
 		client.println("POST /add.php HTTP/1.1"); 
@@ -58,8 +69,5 @@ void loop(){
 		client.stop();	// DISCONNECT FROM THE SERVER
 	}
 
-	delay(300000); // WAIT FIVE MINUTES BEFORE SENDING AGAIN
+	delay(1000); // WAIT BEFORE SENDING AGAIN
 }
-
-
-

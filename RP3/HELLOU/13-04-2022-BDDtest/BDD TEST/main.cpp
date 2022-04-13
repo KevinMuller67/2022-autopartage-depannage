@@ -42,11 +42,11 @@ void loop(){
 		t = (int) dht.readTemperature();
 	}
 
-	data = "temp1=" + t + "&hum1=" + h;
+	data = "temp1=23" + t + "hum1=80" + h;
 
-	if (client.connect("www.*****.*************.com",80)) { // REPLACE WITH YOUR SERVER ADDRESS
+	if (client.connect("92.131.18.210",80)) { // REPLACE WITH YOUR SERVER ADDRESS
 		client.println("POST /add.php HTTP/1.1"); 
-		client.println("Host: *****.*************.com"); // SERVER ADDRESS HERE TOO
+		client.println("Host: 92.131.18.210"); // SERVER ADDRESS HERE TOO
 		client.println("Content-Type: application/x-www-form-urlencoded"); 
 		client.print("Content-Length: "); 
 		client.println(data.length()); 

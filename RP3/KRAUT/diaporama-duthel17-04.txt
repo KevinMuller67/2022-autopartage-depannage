@@ -1,0 +1,21 @@
+D9 : changer titre = liste des tâches à réaliser
+d10 et suivantes : le numéro diapo à mette en haut 
+D10 : ôter "'partie individuelle" et mettre en titre " application...."
++ photo avec un smartphone devant une voiture
+il faut aussi expliquer que dans la voiture le projet prévoit de créer un boitier contenant ESP...etc
+D11 à regrouper avec D10
+D12 ajouter le smartphone + photo de la porte de voiture 
+ + changer le titre (boitier dans la voiture + smartphone) + ajouter visual studio code pour programmer ESP32
+
+EN fait je changerais ainsi :
+D10 photo de tout le matériel (raspberry BDD + ESP32  dans le boitier +  smartphone, etc  ) nécessaire pour vous et vous expliquerez
+D11 photo des IDE utilisés (android studio + visual studio code) pour programmer  
+D12 expliquer que votre travail est de lire BDD donc pour vos tests vous n'utilisez par le raspberry mais votre ordi
+qui héberge une BDD = installation uWamp, création tables de BDD, etc
+D13 à D16 : oui maintenant  vous pouvez présenter vos analyses avec les diag séquence
+D13 à D16 : mettre véhicule au singulier, c'est pour une voiture que le client a réservé
+
+D17 à mettre dans la partie qui pilote la porte, 
+car pour communiquer avec le raspberry c'est en WIFI
+
+

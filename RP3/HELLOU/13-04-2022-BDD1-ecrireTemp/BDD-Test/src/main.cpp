@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <DHT.h>
 #include <SPI.h>
 #include <WiFi.h>        // Include the Wi-Fi library

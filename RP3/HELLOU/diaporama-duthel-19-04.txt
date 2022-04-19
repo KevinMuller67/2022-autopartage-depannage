@@ -1,0 +1,25 @@
+partie commune non modifiée 
+partie personnelle
+D10 : agrandir au maximum le tableau +  ajouter devant le tableau la numérotation de vos parties 1 à 4 
+1= ouvrir fermer le véhicule
+2= acquérir les données du véhicule
+3 = communiquer avec la BDD : courte distance en wifi
+4= communiquer avec la BDD :longue disance
++ faire une diapo qui montre le boitier à concevoir pour communiquer à distance avec la voiture
+(bluetooth + wifi + autre)
+D11 : mettre "partie 1" au dessus et plus grand + dire  que la communication se fait en bluetooth +  ajouter  le symbole
+D12 : supprimer
+D13  :   ôter la photo et mettre un tableau comparatif d'au moins 3 solutions différentes (prix, dimensions, fonctionnement, etc) pour expliquer le choix du composant que vous avez retenu
+D14 : agrandir ++  image de élecro aimant
+D15 agrandir au max l'image
+D16 : supprimer et ajouter l'image d'explication en animation de D15
+D17 changer le titre = titre de la partie 1
+D19 : à mettre sur D13
+D20   mettre "partie 2" au dessus et plus grand
+D23 : ne jamais  dire "ce n'est pas si simple..."  ou "c'est compliqué" ou "c'est facile"
++ montrer que la comm se fait par bluetooth
+
+quand vous aurez fait la partie "données du véhicule" je ferai les commentaires
+
+pour l'instant il y a trop de diapos.... sauf si vous avez fait un chronométrage de votre présentation = max 20min
+

@@ -13,12 +13,14 @@ D13  :   ôter la photo et mettre un tableau comparatif d'au moins 3 solutions d
 D14 : agrandir ++  image de élecro aimant
 D15 agrandir au max l'image
 D16 : supprimer et ajouter l'image d'explication en animation de D15
-D17 changer le titre = titre de la partie 1
+D17 changer le titre = titre de la partie 1 + ajouter diag de déploiement en entourant les zones concernées
 D19 : à mettre sur D13
-D20   mettre "partie 2" au dessus et plus grand
+D20   mettre "partie 2" au dessus et plus grand + ajouter diag de déploiement en entourant les zones concernées
 D23 : ne jamais  dire "ce n'est pas si simple..."  ou "c'est compliqué" ou "c'est facile"
 + montrer que la comm se fait par bluetooth
-
+D25 bien indiquer que la BDD est dans un Raspberry , donc communicaiton locale en WIFI
+D28 : vous devez utiliser la table CAN pour données du véhicule
+D29 ne rien mettre tant que vous n'avez pas travaillé avec Kévin , pour décider du protocole de comm à longue distance
 quand vous aurez fait la partie "données du véhicule" je ferai les commentaires
 
 pour l'instant il y a trop de diapos.... sauf si vous avez fait un chronométrage de votre présentation = max 20min
